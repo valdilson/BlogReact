@@ -15,6 +15,8 @@ app.get("/",(rec,res)=>{
 const rotas = require("./rotas")
 app.use("/api", rotas)
 
+//Ligação do BackEnd ao FrontAnd
+app.use(express.static(__dirname + "/client"))
 
 
 app.listen(port, ()=>{
